@@ -19,11 +19,11 @@ Seamless Integration: Integrates directly with Microsoft Forms, Outlook, and Mic
 
 Error Handling: Prevents duplicate account creation and notifies users accordingly.
 
-Intelligent Logic: Automatically handles username conflicts to ensure unique email addresses (e.g., jmax@siraj.institute vs. jmax2@siraj.institute).
+Intelligent Logic: Automatically handles username conflicts to ensure unique email addresses (e.g., jmax@business.ca vs. jmax2@business.ca).
 
 Automated Communication: Reduces manual effort by sending automated confirmation or rejection emails.
 
-Security: Assigns a specific license, "Exchange Online (Plan 2) for students", ensuring correct access permissions from the start.
+Security: Assigns a specific license, "Exchange Online (Plan 2) for employees", ensuring correct access permissions from the start.
 
 ⚙️ Workflow Logic
 The Power Automate flow follows this logical sequence:
@@ -40,15 +40,15 @@ IF the personal email is not found: The flow proceeds.
 
 Username Generation:
 
-It generates a new email based on the format: first letter of first name + last name + @siraj.institute.
+It generates a new email based on the format: first letter of first name + last name + @business.ca.
 
 It then checks if this newly generated email is already in use by another user.
 
-IF the email is already in use (username conflict): It appends a number to the last name (e.g., jmax2@siraj.institute) and re-checks for uniqueness until a non-conflicting email is generated.
+IF the email is already in use (username conflict): It appends a number to the last name (e.g., jmax2@business.ca) and re-checks for uniqueness until a non-conflicting email is generated.
 
 Account Creation: The flow creates a new user account in Microsoft 365 with the unique email address.
 
-License Assignment: The "Exchange Online (Plan 2) for students" license is assigned to the new user.
+License Assignment: The "Exchange Online (Plan 2) for employeess" license is assigned to the new user.
 
 Final Notification: A confirmation email is sent to the user's personal email, providing them with their new organizational email and instructions.
 
@@ -56,7 +56,7 @@ Final Notification: A confirmation email is sent to the user's personal email, p
 🛠️ How to Adapt This Project
 This project can be easily adapted to different organizations by modifying a few key parameters:
 
-Email Domain: Change @siraj.institute to your organization's domain.
+Email Domain: Change @business.ca to your organization's domain.
 
 License Type: Adjust the license assigned to new users based on organizational needs.
 
