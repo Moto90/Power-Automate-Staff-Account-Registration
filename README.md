@@ -39,7 +39,7 @@ License assignment for new accounts.
 Notification emails for both new registrations and duplicate attempts.
 
 Screenshots
-(Add your screenshots here to illustrate key steps in the flow)
+attached
 
 Technologies Used
 Power Automate (Microsoft 365)
